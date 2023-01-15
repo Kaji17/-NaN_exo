@@ -1,0 +1,140 @@
+|-------------------------------------------------|
+|	RESUME SUR LE COUR DE GIT ET GITHUB	  |
+|-------------------------------------------------|
+
+Auteur : <Ouattara Katina Pe Virgile>
+Date : 15 Janvier 2023
+E-mail: <ouattarapevirgile@gmail.com>
+
+------>Définition
+
+Git est un outil de versioning il nous permet de gérer efficacement les 
+versions dans toutes sortent de projet (développement, réseaux) nous donnons 
+la possibilité de revenir à une version ultérieur lorsqu'on à des erreurs il 
+est aussi beaucoup utilisé pour des projets collaboratifs de toutes catégories
+et de toute taille.
+GitHub lui va nous permettre de créer des depos pour nous projets accéssible sur
+internet, de déployer aussi nos projets.
+
+------>Tout ce qui faut savoir sur Git et GitHub
+
+Après l'installation de Git sur notre environnement de travail il faut avant tout
+faire des configuration global sur la paramètre de l'adminitrateur à savoir
+son nom et son e-mail avec les commande suivante:
+
+¤ Configuration du nom de l'admin 
+$ git config --global user.name "nom utilisateur"
+
+¤ Configuration de l'e-mail de l'admin
+$ $ git config --global user.email "mail@email.com"
+
+¤ --global permet d'appliquer une configuration globale à tous les projets sur
+la machine
+
+¤ Afficher toute l'aide sur git
+$ git 
+ca va nous permmettre d'avoir accès à toute les commandes git 
+
+$ git add --help 
+va nous permettre d'obtenir tous les attibuts concernant le git add
+
+¤ Un repository (dépot)
+C'est un répertoire cacher .git dans ce répertoire on aurra l'historique des
+modifications de notre code source, les zones d'indexation, les métadonnées
+qui vont servir au fonctionnement de git et une base de donnée.
+
+¤ Les trois états d'un fichier dans Git
+	- Modifié: c'est lorsqu'on opère des modifications sur un fichier mais
+	qu'il n'a pas encore été validé dans la base de ddonnée.
+
+	- Indexé (Staging): c'est marqué un fichier modifié dans une version, 
+	il capture l'état de modification dans lequel se trouve ce fichier.
+
+	- Engagé (Commit): c'est lorsque les données indexé sont validé, stocké
+	dans notre base de donnée en local.
+
+¤¤ Commandes usuel
+
+¤ Créer un dépot git
+
+$ git init: dans le repertoire dans lequel vous voulez créer le repository
+
+¤ Connaitre les états des fichier
+
+$ git status: nous donne les différents états des fichier de notre dépot
+
+¤ Indexé un fichier 
+
+$ git add [nomDuFichier.extention] ou
+$ git add . : pour indexé tout les fichier modifié
+
+¤ Désindexé un fichier 
+
+$ git reset [nomDuFichier.extension] ou
+$ git reset . : désindexé tout les fichiers indexé
+
+¤ Faire un commit
+
+$ git commit -m "message"
+
+¤ Visuliser les modification apporté sur un fichier (pas indexé)
+
+$ git diff [nomDuFichier.extension]
+
+¤ Visuliser les modification apporté sur un fichier (indexé non commit)
+
+$ git diff --staged or --cached [nomDuFichier.extension]
+
+¤ Ignorer des fichier pour ne pas les indexé
+il faut créer un fichier .gitignore à l'interieur de notre repository
+ensuite dans se fichier mettre les règles pour ignorer les fichiers
+ex: *.[oa] ignore tous ls fichiers avec l'extension commençant par o ou a
+
+¤¤ Les branches
+Une branche dans Git est simplement un pointeur léger et déplaçable vers un de
+ces commits. La branche par défaut dans Git s'appelle master . Au fur et à 
+mesure des validations, la branche master pointe vers le dernier des commits
+réalisés. À chaque validation, le pointeur de la branche master avance 
+automatiquement.
+
+les commits sont d'abors formés d'un identifiant composé de caractère alpha-numérique
+unique pour les identifié, il à aussi un arbre qui à un identifiant similaire 
+à celui du commit, un auteur le message et la date du commit.
+
+¤ Voyager dans l'historique
+
+$ git log: nous donne acès à l'historique des commit éffectuer
+
+$ git show 6eas...(identifiant d'un commit): nous permet de voir les modification
+effectuer sur les fichiers du commit comparable au git diff mais pour les fichier
+dejà commit
+
+$ git show master : montre directement les modification sur le dernier commit
+
+pour revenir à une version ultérieur, c'est à dire pour se déplacer sur un commit
+on fais : 
+
+$ git checkout 5fg7T.... : on constatera que le tag HEAD serra sur le commit 
+sélectionner et les commits suivant ne serront plus visible
+
+pour revenir sur la branche master on fait : 
+$ git checkout master
+
+$ git log -n 2: affiche les deux dernier commit 
+
+¤ Créer un tag pour remplacer l'identifiant d'un commit
+il faut se placer sur le commit dont on veut donner un tag ensuite:
+
+$ git tag [nomTag] -m "description"
+
+$ git tag --delete [nomTag] pour supprimer un tag
+
+On peut aussi créer une branche à n'importe quel étape d'un commit pour soit
+corriger un bug, apporter de nouvelle version sans casser notre code et suite 
+le fusinner avec la branche pricipale master
+
+$ git branch [nomDeBranch]: pour créer une branche
+
+$ git merge : pour fusionner les modifs
+
+
