@@ -6,7 +6,7 @@ Auteur : <Ouattara Katina Pe Virgile>
 Date : 15 Janvier 2023
 E-mail: <ouattarapevirgile@gmail.com>
 
------->Définition
+------->Définition
 
 Git est un outil de versioning il nous permet de gérer efficacement les 
 versions dans toutes sortent de projet (développement, réseaux) nous donnons 
@@ -16,7 +16,7 @@ et de toute taille.
 GitHub lui va nous permettre de créer des depos pour nous projets accéssible sur
 internet, de déployer aussi nos projets.
 
------->Tout ce qui faut savoir sur Git et GitHub
+------->Tout ce qui faut savoir sur Git et GitHub
 
 Après l'installation de Git sur notre environnement de travail il faut avant tout
 faire des configuration global sur la paramètre de l'adminitrateur à savoir
